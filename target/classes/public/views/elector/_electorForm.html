@@ -1,0 +1,25 @@
+<div ng-messages="form.$error" class="alert alert-danger" ng-show="!form.$pristine && form.$invalid">
+    <div ng-message="required">Campos em vermelho são obrigatórios!</div>
+</div>  
+
+<div class="alert alert-danger" ng-show="message">
+    <div>{{message}}</div>
+</div>    
+
+<div id="formButtons">
+	<div class="btn-group">
+		<input type="submit" id="submit" ng-disabled="form.$invalid" value="Salvar" class="btn btn-success" />
+	</div>	   
+	<div class="btn-group">
+	   	<input type="button" ng-click="service.go('/electorlist')"  class="btn btn-danger" value="Cancelar" novalidade/>   
+	</div>
+	<hr style="margin-top: 10px;" />
+</div>
+
+<div>
+	<uib-tabset active="active">
+		<uib-tab index="0" heading="Dados">
+			<inputtext label="Nome" type="text" ngmodel="register.nick" required="true"/>
+		</uib-tab>
+	</uib-tabset>
+</div>

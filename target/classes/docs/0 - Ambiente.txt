@@ -1,0 +1,11 @@
+Requisitos:
+	* Java8
+	* Postgres
+	
+
+Ferramentas no Projeto:
+	* Spring Boot com Tomcat embarcado
+	* Spring Data com Hibernate
+	* AngularJS 1.5
+	* Maven
+	

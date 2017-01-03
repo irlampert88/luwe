@@ -1,0 +1,58 @@
+<div class="form-group">
+
+	<div id="{{::label}}-div" ng-class="{'input-form-div col-xs-5 required-div': required, 'input-form-div col-xs-5 normal-div': !required}">
+		<label for="{{label}}" ng-if="required" class="input-form-label required-label" >{{label}}*</label>
+		<label for="{{label}}" ng-if="!required" class="input-form-label" >{{label}}</label>
+		
+		<div style="display: flex;">
+			<input name="{{label}}" 
+				disabled="true" 
+				ng-model=value 
+				style="background: white; cursor: default;"
+				placeholder="{{label}}" 
+				class="form-control input-form-input" 
+				ng-required=required>
+
+			<div style="margin-top: -5px; padding-left: 20px;">
+				<div data-toggle="modal" data-target="#{{::label}}-registersDialog">
+					<span class="glyphicon glyphicon-folder-open itemselector-icon" aria-hidden="true" ></span>
+				</div>
+			</div>
+			
+			<div style="margin-top: -5px; padding-left: 20px;">
+				<div data-toggle="modal" data-target="#{{::label}}-confirmClear">	
+					<span class="glyphicon glyphicon-erase itemselector-icon" aria-hidden="true"></span>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<dialogconfirm modalid="{{::label}}-confirmClear"
+		           text="Remover {{label}} selecionado(a)?"
+		           action="fireClearAction()"/>
+
+	<dialog modalid="{{::label}}-registersDialog"
+		    icon={{icon}}
+		    title={{title}}
+		    width= "60%">
+	    
+			<dialog-body>
+				<tablepl tableid="{{::label}}-item-selector-table"
+						 registers=registerstolist
+						 selectaction="selectRegister(item)"
+						 rowselection="true" 
+						 hideactions="true"
+						 columntitles=columntitles
+						 valuestolist=valuestolist
+						 rowstyle="cursor: pointer;"/>
+			</dialog-body>
+			
+			<dialog-footer>
+				<button id="{{::label}}-chooserDialogButtonId" type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			</dialog-footer>
+			
+	</dialog>
+
+</div>
+

@@ -1,0 +1,33 @@
+<div class='panel panel-default table-panel'>
+  	<div class='panel-body'>
+		<table id="{{::tableid}}" class='table table-striped table-hover'>
+		    <thead>
+		    	<tr class='table-title'>
+			        <td ng-repeat='item in columntitles'>
+				    	{{item}}
+			        </td>
+		            <td style='width: 240px;' ng-if="!hideactions">Ações</td>
+	            </tr>
+		    </thead>
+		    <tbody>
+		        <tr ng-repeat='item in registers' style="{{rowstyle}}" ng-click="fireRowSelected(item)">
+		        	<td ng-repeat='value in valuestolist'>
+		        		{{item[value]}}
+		        	</td>
+		            
+		            <td ng-if="!hideactions">
+		            	<a href='{{pagetoedit}}/{{item.id}}' ng-click='fireSelectAction(item)' 
+		            		class='btn btn-primary table-action' style='margin-right: 5px;' > 
+		            		{{editlabel}} 
+		            	</a>
+		            		
+	            		<tableremovebutton ng-if="!hidedeleteaction" selectaction='fireSelectAction(item)' removeaction='removeaction()'></tableremovebutton>
+		            </td>           
+		        </tr>
+		    </tbody>
+		</table>  
+    </div>
+    <div class='panel-footer table-footer'>
+    	Registros: {{registers.length}}
+   	</div>
+</div>

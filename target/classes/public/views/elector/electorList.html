@@ -1,0 +1,13 @@
+<crudheader kind="ELECTOR"></crudheader>
+
+<button type="button" class="btn btn-primary" ng-click="service.go('/electornew')">
+	Novo
+</button>
+
+<tablepl registers="registers" 
+		 removeaction="removeRegister()" 
+		 selectaction="selectRegister(item)"
+		 columntitles="['ID', 'Nome']"
+		 valuestolist="['id', 'nick']"
+		 pagetoedit="#electoredit">
+</tablepl>

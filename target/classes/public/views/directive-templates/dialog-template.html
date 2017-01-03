@@ -1,0 +1,14 @@
+<div id="{{::modalid}}" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" style="width: {{width}}">
+		<div class="modal-content">
+			<div class="modal-header" style="display: flex;">
+				<span class="glyphicon {{icon}}" aria-hidden="true" style="font-size: 25px !important; margin-right: 10px;"></span>
+				<h4 class="modal-title" style="font-size: 20px !important; margin-right: 10px;">{{title}}</h4>
+			</div>
+
+			<div class="modal-body" ng-transclude="dbody"></div>
+			
+      		<div class="modal-footer" ng-transclude="dfooter"></div>
+		</div>
+	</div>
+</div>

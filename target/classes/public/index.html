@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="icon" type="image/png" href="site/images/favicon.png" />
+	
+	    <title>Luwe</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./site/css/bootstrap.min.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./site/css/signin.css" rel="stylesheet">
+	    <link href="./site/css/app.css" rel="stylesheet">
+	    <link href="./site/css/pnotify.custom.min.css" rel="stylesheet">
+	    <link href="./site/css/pnotify-hack.css" rel="stylesheet">
+	    <style>
+		    [ng\:cloak], [ng-cloak], .ng-cloak {
+			  display: none !important;
+			}
+	    </style>
+	</head>
+	
+	 <body class="body-index" ng-cloak>
+		<div ng-include="'/views/shared/menu.html'"></div>
+		
+	    <div class="container" ng-view></div>
+	
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	
+		<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>        
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.min.js"></script>		
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>	
+
+	    <script src="./site/js/ui-bootstrap-custom-1.3.3.min.js"></script>
+	    <script src="./site/js/ui-bootstrap-custom-tpls-1.3.3.min.js"></script>
+	    <script src="./site/js/jquery.min.js"></script>
+	    <script src="./site/js/bootstrap.min.js"></script>
+	    <script src="./site/js/pnotify.custom.min.js"></script>
+	    <script src="./site/js/components.js"></script>
+
+		<script src="./app/app.js" ></script>
+		<script src="./app/routers.js" ></script>
+		<script src="./app/kinds.js" ></script>
+		
+		<script src="./app/filters/date-filter.js" ></script>
+
+		<script src="./app/directives/directives.js" ></script>
+		<script src="./app/directives/table-directive.js" ></script>
+		<script src="./app/directives/form-directive.js" ></script>
+		  
+		<script src="./app/controllers/electorController.js" ></script>
+		<script src="./app/controllers/restaurantController.js" ></script>
+		<script src="./app/controllers/electionController.js" ></script>
+		
+		<script src="./app/services/notifyService.js" ></script>
+		<script src="./app/services/electorService.js" ></script>
+		<script src="./app/services/restaurantService.js" ></script>
+		<script src="./app/services/electionService.js" ></script>
+	</body>
+
+	<footer>
+	</footer>
+</html>

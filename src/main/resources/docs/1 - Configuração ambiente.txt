@@ -1,0 +1,5 @@
+Configuração de DS:
+	* Criar um banco de dados no postgres chamado: luwe_db
+	* Abrir o arquivo application.properties para configurar a conexão com o banco
+	* Rodar a classe Application.java
+	* Acessar na URL: localhost:8080/

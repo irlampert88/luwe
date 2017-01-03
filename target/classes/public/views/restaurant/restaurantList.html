@@ -1,0 +1,13 @@
+<crudheader kind="RESTAURANT"></crudheader>
+
+<button type="button" class="btn btn-primary" ng-click="service.go('/restaurantnew')">
+	Novo
+</button>
+
+<tablepl registers="registers" 
+		 removeaction="removeRegister()" 
+		 selectaction="selectRegister(item)"
+		 columntitles="['ID', 'Nome', 'Senha WI-FI']"
+		 valuestolist="['id', 'nick', 'wifiPassword']"
+		 pagetoedit="#restaurantedit">
+</tablepl>

@@ -1,0 +1,17 @@
+<crudheader kind="ELECTION"></crudheader>
+
+<form name="form" class="form-horizontal" role="form" ng-submit="save()">
+	<div class="btn-group">
+		<input type="submit" id="submit" ng-disabled="form.$invalid" value="Criar Eleição" class="btn btn-success" />
+	</div>	   
+</form>
+
+<tablepl registers="registers" 
+		 removeaction="removeRegister()" 
+		 selectaction="selectRegister(item)"
+		 editlabel="Votar"
+		 hidedeleteaction="true"
+		 columntitles="['Data', 'Restaurante mais votado', 'Votos no Restaurante', 'Total de Votos']"
+		 valuestolist="['date', 'restaurant', 'restaurantVotes', 'totalVotes']"
+		 pagetoedit="#electionedit">
+</tablepl>

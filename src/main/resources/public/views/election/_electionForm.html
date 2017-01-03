@@ -1,0 +1,64 @@
+<!-- <div ng-messages="form.$error" class="alert alert-danger" ng-show="!form.$pristine && form.$invalid"> -->
+<!--     <div ng-message="required">Campos em vermelho sÃ£o obrigatÃ³rios!</div> -->
+<!-- </div>   -->
+
+<!-- <div class="alert alert-danger" ng-show="message"> -->
+<!--     <div>{{message}}</div> -->
+<!-- </div>     -->
+
+<div id="formButtons">
+<!-- 	<div class="btn-group"> -->
+<!-- 		<input type="submit" id="submit" ng-disabled="form.$invalid" value="Salvar" class="btn btn-success" /> -->
+<!-- 	</div>	    -->
+	<div class="btn-group">
+	   	<input type="button" ng-click="service.go('/electionlist')"  class="btn btn-danger" value="Cancelar" novalidade/>   
+	</div>
+	<hr style="margin-top: 10px;" />
+</div>
+
+<div>
+	<uib-tabset active="active">
+		<uib-tab index="0" heading="Resumo">
+			<inputlabel label="Data" type="text" ngmodel="register.dateFormatted"></inputlabel>
+			<inputlabel label="Restaurante mais votado" type="text" ngmodel="register.optionWinner.restaurant.nick"></inputlabel>
+			<inputlabel label="Votos neste restaurante" type="text" ngmodel="register.optionWinner.electors.length"></inputlabel>
+			<inputlabel label="Total de Votos" type="text" ngmodel="register.totalVotes"></inputlabel>
+		</uib-tab>
+		
+		<!-- >>>>> VERIFICAR O DO PORQUE O ERRO DO "REGISTERSTOLIST"! <<<<<< -->
+		<uib-tab index="1" heading="Votação">
+			<chooser kind="ELECTOR" 
+				     label="Eleitor" 
+				     value="vote.elector.nick"
+				     model="vote.elector"
+				     registerstolist="restaurants"
+				     required="true"
+				     columntitles="['ID', 'Nome']"
+		 			 valuestolist="['id', 'nick']"/>
+		 	</chooser>
+		 	
+		 	<chooser kind="RESTAURANT" 
+				     label="Restaurante" 
+				     value="vote.restaurant.nick"
+				     model="vote.restaurant"
+				     registerstolist="electors"
+				     required="true"
+				     columntitles="['ID', 'Nome', 'Senha WI-FI']"
+		 			 valuestolist="['id', 'nick', 'wifiPassword']"/>
+		 	</chooser>
+		 	<!-- >>>>> VERIFICAR O DO PORQUE O ERRO DO "REGISTERSTOLIST"! <<<<<< -->
+		 	
+		 	<div class="btn-group">
+			   	<input type="button" ng-click="newVote()" class="btn btn-success" value="Votar" novalidade/>   
+			</div>
+		</uib-tab>
+		
+		<uib-tab index="2" heading="Eleitos">
+			<tablepl registers="electeds" 
+					 hideactions="true"
+					 columntitles="['Restaurante', 'Votos']"
+					 valuestolist="['restaurant', 'votes']">
+			</tablepl>
+		</uib-tab>
+	</uib-tabset>
+</div>

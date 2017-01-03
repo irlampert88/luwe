@@ -1,0 +1,13 @@
+<div class="form-group">
+	<div id="{{::label}}" ng-class="{'input-form-div col-xs-5 required-div': required, 'input-form-div col-xs-5 normal-div': !required}">
+		<label for="{{label}}" ng-if="required" class="input-form-label required-label" >{{label}}*</label>
+		<label for="{{label}}" ng-if="!required" class="input-form-label" >{{label}}</label>
+		
+		<input name="{{label}}" 
+			type="{{type}}" 
+			ng-model="ngmodel" 
+			placeholder="{{label}}" 
+			class="form-control input-form-input" 
+			ng-required=required>
+	</div>
+</div>

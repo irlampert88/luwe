@@ -1,0 +1,15 @@
+<dialog modalid={{::modalid}}
+	    icon="glyphicon-question-sign"
+	    title="Confirmaçao"
+	    width= "600px">
+    
+		<dialog-body>
+			<p>{{text}}</p>
+		</dialog-body>
+
+    	<dialog-footer>
+			<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			<button type="button" class="btn btn-primary" ng-click="fireConfirmAction()" data-dismiss="modal">Confirmar</button>
+		</dialog-footer>
+		
+</dialog>

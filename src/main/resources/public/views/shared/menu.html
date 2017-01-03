@@ -1,0 +1,53 @@
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+
+		<div id="navbar" class="navbar-collapse collapse" >
+			<ul class="nav navbar-nav">
+				<li>
+					<a class="menu-text" href="#/"> 
+						<span class="glyphicon glyphicon-home menu-icon" aria-hidden="true"></span>
+					</a>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle menu-text" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+						Cadastros<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="menu-text" href="#/restaurantlist"> <span class="glyphicon glyphicon-map-marker menu-icon" aria-hidden="true"></span>
+								Restaurantes
+							</a>
+						</li>
+						<li role="separator" class="divider"></li>
+						<li>
+							<a class="menu-text" href="#/electorlist"> <span class="glyphicon glyphicon-user menu-icon" aria-hidden="true"></span>
+								Eleitores
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">					
+					<a class="dropdown-toggle menu-text" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+						Eleições<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="menu-text" href="#/electionlist"> <span class="glyphicon glyphicon-check menu-icon" aria-hidden="true"></span>
+								Eleições
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right" ng-if="authenticated">
+				<li>
+					<a href="#" class="menu-text" ng-click="controller.logout()"> 
+						<span class="glyphicon glyphicon-off menu-icon" aria-hidden="true"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</nav>

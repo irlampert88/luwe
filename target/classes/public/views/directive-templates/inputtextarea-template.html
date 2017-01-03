@@ -1,0 +1,22 @@
+<div class="form-group">
+	
+	<div id="div" 
+		 style="height: 200px;"
+		 ng-class="{'input-form-div col-xs-5 required-div': required, 'input-form-div col-xs-5 normal-div': !required}">
+		<label for="{{label}}" ng-if="required" class="input-form-label required-label" >{{label}}*</label>
+		<label for="{{label}}" ng-if="!required" class="input-form-label" >{{label}}</label>
+		
+		<textarea class="form-control" 
+				  rows="6" 
+				  placeholder="{{label}}" 
+				  name="{{label}}" maxlength="{{maxlength}}"
+				  style="box-shadow: none; border: none; resize: none; font-size: 17px;"
+				  class="form-control input-form-input input-form-textarea" 
+				  ng-model="ngmodel" 
+				  id="{{label}}"></textarea>
+
+			<div style="padding: 0px; margin-right: -5px; color: rgb(169, 169, 169); text-align: right;">
+	    	 Tamanho: {{ngmodel.length == null ? 0 : ngmodel.length}} de {{maxlength}}
+	   	</div>			  
+	</div>
+</div>
